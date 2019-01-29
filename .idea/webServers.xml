@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0e990ff3-e60e-4694-91f2-57cd932bd83c" name="servidor 42" url="http://190.98.210.42">
+        <fileTransfer host="190.98.210.42" port="5735" rootFolder="/var/www/html/neotur" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="5735" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
