@@ -905,9 +905,9 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
 .sec-nueve {
     min-height: 108vh;
     background-image: url(../image/Seccion6/fondo@2x.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: -60px;
+    background-position-y: -17vh;
     overflow: hidden;
     display: flex;
 }
@@ -1222,6 +1222,10 @@ footer {
         margin-bottom: 20%;
     }
 
+    .sec-seis{
+        min-height: 70vh;
+    }
+
     .sec-seis > .rayado{
         width: 100%;
     }
@@ -1247,8 +1251,16 @@ footer {
         font-size: 1.3rem;
     }
 
+    .sec-siete{
+        min-height: 70vh;
+    }
+
     .sec-siete > .contenido > .titulo > h1{
         font-size: 2.8rem;
+    }
+
+    .sec-siete > .imagen-top{
+        top: -25vh;
     }
 
     .sec-ocho{
@@ -1276,5 +1288,32 @@ footer {
         left: 23%;
         width: 53%;
     }
+
+    .sec-nueve{
+        background-position: center;
+        min-height: 80vh;
+        background-position-y: 0vh;
+        align-items: center;
+    }
+
+    .sec-nueve > .sec > .imagen-uno{
+        display: none;
+    }
+
+    .sec-nueve > .sec-contenido {
+        padding-top: 0;
+        margin-left: -43%;
+        width: 100%;
+    }
+
+    .menu-inferior{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer > p {
+        font-size: 0.8rem;
+    }
+
 
 }
