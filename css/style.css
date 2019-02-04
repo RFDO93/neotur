@@ -849,6 +849,7 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     background-position-x: right;
     background-position-y: bottom;
     position: relative;
+    background-color: darkturquoise;
 }
 
 .sec-ocho > .img-uno {
@@ -1216,8 +1217,64 @@ footer {
 
     .sec-cinco > .contenido > .body-sectres-contenido{
         width: 100%;
-        margin-left: 50%;
-        margin-top: 97px;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 20%;
+    }
+
+    .sec-seis > .rayado{
+        width: 100%;
+    }
+
+    .sec-seis > .contenido > .sec-contenido{
+        width: 100%;
+        padding-right: 0%;
+    }
+
+    .sec-seis > .contenido > .sec-imagen{
+        display: none;
+    }
+
+    .sec-seis > .contenido > .sec-contenido > .text3{
+        font-size: 5rem;
+    }
+
+    .sec-seis > .contenido > .sec-contenido > h1{
+        font-size: 2.4rem;
+    }
+
+    .sec-seis > .contenido > .sec-contenido > .text2{
+        font-size: 1.3rem;
+    }
+
+    .sec-siete > .contenido > .titulo > h1{
+        font-size: 2.8rem;
+    }
+
+    .sec-ocho{
+        min-height: 45vh;
+    }
+
+    .sec-ocho > .titulo > p{
+        font-size: 2rem;
+    }
+
+    .sec-ocho > .titulo > h1{
+        font-size: 3rem;
+    }
+
+    .sec-ocho > .titulo{
+        height: 16vh;
+    }
+
+    .sec-ocho > .img-dos{
+        top: 16vh;
+    }
+
+    .sec-ocho > button{
+        top: 34vh;
+        left: 23%;
+        width: 53%;
     }
 
 }
