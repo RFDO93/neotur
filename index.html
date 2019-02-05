@@ -4,45 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Neutour</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="image/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="image/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="image/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="image/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="image/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="image/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="image/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="image/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="image/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="image/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
+    <link rel="manifest" href="image/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="image/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animate.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="js/fontawesome-all.js" integrity="sha384-qD/MNBVMm3hVYCbRTSOW130+CWeRIKbpot9/gR1BHkd7sIct4QKhT1hOPd+2hO8K" crossorigin="anonymous"></script>
+    <script>
+            $(window).scroll(function(kk,ll) {
+                let cscr = $(window).scrollTop();
+                let pag1 = $(".opciones-top").offset().top;
+                let margen = -300;
+
+                console.log(cscr);
+
+                if ( cscr > pag1+margen-300 ) {
+                    $(".opciones-top").css('visibility','visible');
+                    $(".opciones-top").addClass('fadeInUp');
+                    $(".opciones-top").addClass('animated');
+                }
+
+            });
+    </script>
 </head>
 <body>
 
 <div class="seccion sec-uno color-gradient">
     <video  class="videoBackground" loop autoplay muted>
-        <source src="image/finalrender_final1.mp4" type='video/mp4' />
+        <source src="image/FinalRender.mp4" type='video/mp4' />
     </video>
     <div class="menu">
         <img src="image/Seccion1/Logo.png" class="logo" alt="">
         <div class="seccion-enlace">
             <div class="enlace">
-                <img src="image/Seccion1/Home_1.png" alt="">
+                <img src="image/Seccion1/Home_1.svg" alt="">
                 <a href="#">Inicio</a>
             </div>
             <div class="enlace">
-                <img src="image/Seccion1/Hospedaje.png" alt="">
+                <img src="image/Seccion1/Hospedaje.svg" alt="">
                 <a href="#">Hospedaje</a>
             </div>
             <div class="enlace">
-                <img src="image/Seccion1/Gastronomia.png" alt="">
+                <img src="image/Seccion1/Gastronomia.svg" alt="">
                 <a href="#">Gastronomia</a>
             </div>
             <div class="enlace">
-                <img src="image/Seccion1/Turismo.png" alt="">
+                <img src="image/Seccion1/Turismo.svg" alt="">
                 <a href="#">Turismo</a>
             </div>
             <a href="" class="btn-iniciar-session ">Iniciar sesión</a>
         </div>
     </div>
+    <div class="play">
+        <i class="far fa-play-circle"></i>
+        <p>ver video</p>
+    </div>
     <div class="buscar-destino">
+
         <input type="text" autocomplete="off" placeholder="Cual es tu destino">
         <div class="icono-buscar">
-            <img src="image/Seccion1/Lupa.png" alt="">
+            <img src="image/Seccion1/Lupa.svg" alt="">
         </div>
     </div>
     <div class="opciones-top">
@@ -248,7 +289,7 @@
         </div>
     </div>
 </div>
-<div class="seccion sec-seis color-gradient">
+<div class="seccion sec-seis">
     <div class="rayado">
 
     </div>
@@ -301,16 +342,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -347,16 +388,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -393,16 +434,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -439,16 +480,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -485,16 +526,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -531,16 +572,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -578,16 +619,16 @@
                     <div class="body-car">
                         <div class="like-comen" >
                             <div class="up-down">
-                                <i class="far fa-thumbs-up"></i>
+                                <img src="image/1.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="up-down">
-                                <i class="far fa-thumbs-down"></i>
+                                <img src="image/2.svg" alt="">
                                 <p>6</p>
                             </div>
                             <div class="separador"></div>
                             <div class="comen">
-                                <i class="far fa-comment-dots"></i>
+                                <img src="image/3.svg" alt="">
                                 <p>250 comentarios</p>
                             </div>
                         </div>
@@ -614,7 +655,7 @@
         <p>CREA TU PROPIA</p>
         <h1>PAGINA WEB</h1>
     </div>
-    <button type="button" class="color-gradient" >Ver mas >>></button>
+    <button type="button" >Ver mas >>></button>
 </div>
 <div class="seccion sec-nueve">
     <div class="sec">
@@ -649,12 +690,31 @@
 <footer>
     <p>Copyright © 1999-2018 Natural Phone Chile Ltda.</p>
 </footer>
+<div class="modal-video">
+    <div class="cerrar">
+        <i class="fas fa-times"></i>
+    </div>
+    <video controls id="videoNeutour">
+        <source src="image/FinalRender_final1.mp4" type='video/mp4' />
+    </video>
+</div>
 <script>
     $('.grid').masonry({
         itemSelector: '.grid-item',
         columnWidth: '.grid-sizer',
         percentPosition: true,
         gutter: 10
+    });
+
+    $(".play").click(function() {
+        $(".modal-video").css('display','flex');
+    });
+
+    $(".cerrar").click(function () {
+        let video = document.getElementById("videoNeutour");
+        video.pause();
+
+        $(".modal-video").css('display','none');
     });
 </script>
 <script>
@@ -676,7 +736,7 @@
                 items: 4
             }
         }
-    })
+    });
 </script>
 </body>
 </html>
