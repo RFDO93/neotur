@@ -30,22 +30,6 @@
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="js/fontawesome-all.js" integrity="sha384-qD/MNBVMm3hVYCbRTSOW130+CWeRIKbpot9/gR1BHkd7sIct4QKhT1hOPd+2hO8K" crossorigin="anonymous"></script>
-    <script>
-            $(window).scroll(function(kk,ll) {
-                let cscr = $(window).scrollTop();
-                let pag1 = $(".opciones-top").offset().top;
-                let margen = -300;
-
-                console.log(cscr);
-
-                if ( cscr > pag1+margen-300 ) {
-                    $(".opciones-top").css('visibility','visible');
-                    $(".opciones-top").addClass('fadeInUp');
-                    $(".opciones-top").addClass('animated');
-                }
-
-            });
-    </script>
 </head>
 <body>
 
@@ -715,6 +699,42 @@
         video.pause();
 
         $(".modal-video").css('display','none');
+    });
+
+    $("body").scroll(function(kk,ll) {
+        let cscr = $("body").scrollTop();
+        let elem1 = $(".opciones-top").offset().top;
+        let elem2 = $(".sec-tres > .contenido > .body-sectres-img");
+        let elem3 = $(".sec-cuatro > .contenido > .body-sectres-img");
+        let elem4 = $(".sec-cinco > .contenido > .body-sectres-img");
+        let margen = -600;
+
+
+
+        if ( cscr > elem1+margen ) {
+            $(".opciones-top").css('visibility','visible');
+            $(".opciones-top").addClass('fadeInUp');
+            $(".opciones-top").addClass('animated');
+        }
+        if ( cscr > elem2.offset().top+margen+500 ) {
+            $(elem2).css('visibility','visible');
+            $(elem2).addClass('fadeInUp');
+            $(elem2).addClass('animated');
+        }
+
+        if ( cscr > elem3.offset().top+margen+400 ) {
+            $(elem3).css('visibility','visible');
+            $(elem3).addClass('fadeInUp');
+            $(elem3).addClass('animated');
+        }
+
+        if ( cscr > elem4.offset().top+margen+400 ) {
+            $(elem4).css('visibility','visible');
+            $(elem4).addClass('fadeInUp');
+            $(elem4).addClass('animated');
+        }
+
+
     });
 </script>
 <script>

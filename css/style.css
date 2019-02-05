@@ -409,6 +409,7 @@ a,p {
     position: absolute;
     top: -14rem;
     left: 15%;
+    visibility: hidden;
 }
 
 .sec-tres > .contenido > .body-sectres-img > .imagen {
