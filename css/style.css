@@ -1,3 +1,13 @@
+@font-face {
+    font-family: GothamBlack;
+    src: url(../Fonts/GothamBlack.ttf);
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url(../Fonts/GothamLight.ttf);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -8,8 +18,12 @@ html,body {
     overflow-x: hidden;
 }
 
-p, h1, h2, h3, h4, h5, h6, b, button, a, i {
-    font-family: Arial;
+h1, h2, h3, h4, h5, h6, button,{
+    font-family: GothamBlack;
+}
+
+a,p {
+    font-family: GothamLight;
 }
 
 .menu {
@@ -41,11 +55,12 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     margin-right: 45px;
 }
 
-.menu > .seccion-enlace > .enlace > p {
+.menu > .seccion-enlace > .enlace > a {
     color: #ffffff;
     font-weight: 100;
     font-size: 15px;
     margin-left: 26px;
+    text-decoration: none;
 }
 
 .menu > .seccion-enlace > .enlace > img {
@@ -164,6 +179,7 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     font-size: 24px;
     color: #ffffff;
     font-weight: 900;
+    font-family: GothamBlack;
 }
 
 .contenido {
@@ -314,7 +330,7 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
 .sec-tres > .contenido > .body-sectres-img {
     width: 50%;
     position: absolute;
-    top: -39vh;
+    top: -14rem;
     left: 15%;
 }
 
@@ -402,7 +418,7 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
 }
 
 .sec-cuatro {
-    height: 80vh;
+    height: auto;
     background-color: #00E5BE;
 }
 
@@ -437,10 +453,10 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     position: absolute;
-    top: 52vh;
+    top: 40vh;
     display: flex;
     align-items: center;
-    right: -60px;
+    right: -75px;
 }
 
 .sec-cuatro > .contenido > .body-sectres-img > .imagen > .tituloVertical > h1 {
@@ -517,7 +533,7 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
 .sec-cinco > .contenido > .body-sectres-img {
     width: 50%;
     position: absolute;
-    top: -39vh;
+    top: -16rem;
 }
 
 .sec-cinco > .contenido > .body-sectres-img > .imagen {
@@ -612,7 +628,6 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     -ms-transform: skewY(8deg);
     -webkit-transform: skewY(8deg);
     transform: skewY(8deg);
-    background-color: #00E5BE;
     height: 94vh;
     position: absolute;
     z-index: 1;
@@ -697,7 +712,6 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     height: 40px;
     width: 190px;
     border-radius: 20px;
-    background-color: #00E5BE;
     color: #fff;
     font-weight: 600;
     font-size: 17px;
@@ -885,7 +899,15 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     background-position-x: right;
     background-position-y: bottom;
     position: relative;
-    background-color: #6FD1D8;
+}
+
+.sec-ocho >  .color-gradient{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -6;
 }
 
 .sec-ocho > .img-uno {
@@ -929,7 +951,6 @@ p, h1, h2, h3, h4, h5, h6, b, button, a, i {
     border-radius: 3vh;
     width: 13%;
     height: 6.5vh;
-    background: #00E5BE;
     z-index: 3;
     position: absolute;
     top: 71vh;
@@ -1068,7 +1089,6 @@ footer {
 }
 
 
-
 @media only screen and ( min-width: 300px ) and ( max-width: 480px ) {
 
     /* Aquí van los estilos para iPhone vertical */
@@ -1202,7 +1222,7 @@ footer {
     }
 
     .sec-cuatro{
-        min-height: 107vh;
+        height: auto;
     }
 
     .sec-cuatro > .contenido > .body-sectres-contenido {
@@ -1298,7 +1318,7 @@ footer {
     }
 
     .sec-seis > .contenido > .sec-contenido > .text3{
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
 
     .sec-seis > .contenido > .sec-contenido > h1{
