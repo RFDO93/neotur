@@ -18,7 +18,7 @@ html,body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, button,{
+h1, h2, h3, h4, h5, h6, button{
     font-family: GothamBlack;
 }
 
@@ -84,16 +84,27 @@ a,p {
 }
 
 .sec-uno {
-    height: 120vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
-    background-image: url("http://placeimg.com/1900/1200/arch");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    height: 100vh;
+    width: 100% !important;
+}
+
+.sec-uno > .videoBackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    z-index: -10;
+    visibility: visible;
+    width: 100vw !important;
+    object-fit: cover!important;
 }
 
 .sec-uno > img {
@@ -136,7 +147,7 @@ a,p {
     width: 75%;
     height: 30vh;
     position: absolute;
-    bottom: -15vh;
+    bottom: -30vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -196,7 +207,7 @@ a,p {
 }
 
 .sec-dos > .contenido > .header {
-    padding-top: 28vh;
+    padding-top: 38vh;
     padding-left: 3%;
     display: flex;
     justify-content: space-between;
@@ -418,7 +429,7 @@ a,p {
 }
 
 .sec-cuatro {
-    height: auto;
+    height: 65vh;
     background-color: #00E5BE;
 }
 
@@ -1068,6 +1079,23 @@ footer {
 
 /* Aquí van los estilos generales del sitio */
 
+
+@media only screen and ( min-width: 1610px ) {
+
+    /* Aquí van los estilos para iPad horizontal */
+    .sec-uno > .opciones-top {
+        width: 75%;
+        height: 30vh;
+        position: absolute;
+        bottom: -20vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+
 @media only screen and ( max-width: 1024px ) {
 
     /* Aquí van los estilos para iPad horizontal */
@@ -1391,6 +1419,16 @@ footer {
 
     footer > p {
         font-size: 0.8rem;
+    }
+
+    .sec-uno > .videoBackground {
+        position: absolute;
+        top: 0;
+        width: auto;
+        height: 100%;
+        z-index: -10;
+        visibility: visible;
+
     }
 
 
