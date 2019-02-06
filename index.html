@@ -30,13 +30,15 @@
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="js/fontawesome-all.js" integrity="sha384-qD/MNBVMm3hVYCbRTSOW130+CWeRIKbpot9/gR1BHkd7sIct4QKhT1hOPd+2hO8K" crossorigin="anonymous"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 <body>
 
-<div class="seccion sec-uno color-gradient">
-    <video  class="videoBackground" loop autoplay muted>
+<div class="seccion sec-uno color-gradient" id="sec-uno">
+    <video  class="videoBackgroundPhone" loop autoplay muted>
         <source src="image/FinalRender.mp4" type='video/mp4' />
     </video>
+    <div class="videoBackground" id="videoBackground"></div>
     <div class="menu">
         <img src="image/Seccion1/Logo.png" class="logo" alt="">
         <div class="seccion-enlace">
@@ -59,17 +61,18 @@
             <a href="" class="btn-iniciar-session ">Iniciar sesión</a>
         </div>
     </div>
+
     <div class="play">
         <i class="far fa-play-circle"></i>
         <p>ver video</p>
     </div>
-    <div class="buscar-destino">
+    <!--<div class="buscar-destino">
 
         <input type="text" autocomplete="off" placeholder="Cual es tu destino">
         <div class="icono-buscar">
             <img src="image/Seccion1/Lupa.svg" alt="">
         </div>
-    </div>
+    </div>-->
     <div class="opciones-top">
         <div class="top">
             <div class="suptop">
@@ -676,6 +679,39 @@
 
 </div>
 <script>
+
+    let options = {
+        id : 315640245,
+        autoplay:true,
+        loop: true
+    };
+
+    let player = new Vimeo.Player('videoBackground',options);
+    player.on('play', function () {
+        console.log('Play')
+    });
+
+    var x = window.matchMedia("(max-width: 1000px)");
+
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+            let setVideo = document.getElementById("videoBackground");
+            setVideo.remove();
+
+            /*let getVideo = document.createElement('video'); ("videoBackground");
+            getVideo.id = 'videoBackground';
+            getVideo.classList.add("videoBackground");
+            getVideo.src = "image/FinalRender.mp4";
+            getVideo.load();
+
+            let elementSecUno = document.getElementById("sec-uno");
+            elementSecUno.appendChild(getVideo);
+            getVideo.play();*/
+        }
+    }
+
+    myFunction(x);
+
     $('.grid').masonry({
         itemSelector: '.grid-item',
         columnWidth: '.grid-sizer',

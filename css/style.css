@@ -126,7 +126,8 @@ a,p {
 }
 
 .sec-uno > .videoBackground {
-    position: absolute;
+    padding:57% 0 0 0;
+    position:relative;
     left: 0;
     top: 0;
     height: auto;
@@ -134,6 +135,25 @@ a,p {
     visibility: visible;
     width: 100vw !important;
     object-fit: cover!important;
+}
+
+.sec-uno > .videoBackground > iframe{
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.sec-uno > .videoBackgroundPhone {
+    position:relative;
+    left: 0;
+    top: 0;
+    height: auto;
+    z-index: -10;
+    width: 100vw !important;
+    object-fit: cover!important;
+    display: none;
 }
 
 .sec-uno > img {
@@ -150,6 +170,7 @@ a,p {
     flex-direction: row;
     align-items: center;
     cursor: pointer;
+    display: none;
 }
 
 .play > svg{;
@@ -1848,11 +1869,21 @@ footer {
         height: 100%;
         z-index: -10;
         visibility: visible;
+    }
 
+    .sec-uno > .videoBackgroundPhone {
+        position: absolute;
+        top: 0;
+        width: auto;
+        height: 100%;
+        z-index: -10;
+        visibility: visible;
+        display: flex;
     }
 
     .play {
         margin-top: -25%;
+        display: flex;
     }
 
 }
