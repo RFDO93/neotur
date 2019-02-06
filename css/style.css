@@ -1062,6 +1062,7 @@ a,p {
     left: 15%;
     top: 38vh;
     width: 70%;
+    visibility: hidden;
 }
 
 .sec-ocho > .titulo {
@@ -1146,6 +1147,7 @@ a,p {
     height: 130vh;
     top: 16vh;
     right: 0;
+    visibility: hidden;
 }
 
 .sec-nueve > .sec-contenido {
@@ -1249,9 +1251,11 @@ footer {
     background-color: rgba(0,0,0,1);
     display: none;
 }
-.modal-video > video{
+.modal-video > .video{
     width: 100%;
     height: auto;
+    padding: 0;
+    position: relative;
 }
 
 .cerrar{
@@ -1803,7 +1807,6 @@ footer {
 
     .sec-ocho > .img-dos{
         top: 16vh;
-        visibility: hidden;
     }
 
     .sec-ocho > button{
