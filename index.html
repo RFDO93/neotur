@@ -200,10 +200,7 @@
                 <h1>DESTINOS</h1>
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                En Neutour encuentras toda la información  de destinos turísticos necesaria para coordinar su viaje. Fotos de atractivos, información del lugar como atracciones, actividades, ubicación, como llegar, cuando ir, clima, servicios, alrededores, hoteles cercanos y mucho más.
             </p>
 
             <button type="button" class="color-gradient">Ver mas >>></button>
@@ -214,10 +211,7 @@
     <div class="contenido">
         <div class="body-sectres-contenido">
             <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                Reserva y disfrutas de los mejores restaurantes en un solo lugar, las opciones mas variadas.
             </p>
             <div class="Titulo">
                 <h1>LOS MEJORES</h1>
@@ -263,10 +257,7 @@
                 <h1>HOTELES</h1>
             </div>
             <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi
-                enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in
+                Vive, disfruta y conoce los mejores hoteles, con neutour puedes guardar en tus recuerdos momentos inolvidables.
             </p>
 
             <button type="button" class="color-gradient">Ver mas >>></button>
@@ -675,12 +666,14 @@
     <p>Copyright © 1999-2018 Natural Phone Chile Ltda.</p>
 </footer>
 <div class="modal-video">
-    <div class="cerrar">
+    <!--<div class="cerrar">
         <i class="fas fa-times"></i>
-    </div>
-    <video controls id="videoNeutour">
-        <source src="image/FinalRender_final1.mp4" type='video/mp4' />
-    </video>
+    </div>-->
+    <!--<video controls id="videoNeutour">
+        <source src="https://vimeo.com/315640245" type='video/mp4' />
+    </video>-->
+    <!--<iframe src="https://player.vimeo.com/video/315640245" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
+
 </div>
 <script>
     $('.grid').masonry({
@@ -691,15 +684,30 @@
     });
 
     $(".play").click(function() {
+        $(".modal-video").html(`
+            <div class="cerrar" onclick="cerrar_video()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/315640245?color=a800ef&title=0&byline=0&portrait=0"
+                        style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                        frameborder="0" webkitallowfullscreen
+                        mozallowfullscreen
+                        allowfullscreen>
+
+                </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js">`);
+        $(".modal-video").append(`</ script>`);
         $(".modal-video").css('display','flex');
     });
 
-    $(".cerrar").click(function () {
-        let video = document.getElementById("videoNeutour");
-        video.pause();
-
+    function cerrar_video () {
+        //let video = document.getElementById("videoNeutour");
+        //video.pause();
+        $(".modal-video > * ").remove();
         $(".modal-video").css('display','none');
-    });
+    }
 
     $("body").scroll(function(kk,ll) {
         let cscr = $("body").scrollTop();
@@ -725,80 +733,72 @@
             $(".opciones-top").addClass('animated');
         }
 
-        if ( cscr > elem2.offset().top+(margen+1400) ) {
+        if ( elem2.offset().top+margen < 0 ) {
             $(elem2).css('visibility','visible');
             $(elem2).addClass('fadeInUp');
             $(elem2).addClass('animated');
         }
 
-        if ( cscr > elem3.offset().top+(margen+1600) ) {
+        if ( elem3.offset().top+margen <0 ) {
             $(elem3).css('visibility','visible');
             $(elem3).addClass('fadeInUp');
             $(elem3).addClass('animated');
         }
 
-        if ( cscr > elem4.offset().top+(margen+2000) ) {
+        if ( elem4.offset().top+margen < 0 ) {
             $(elem4).css('visibility','visible');
             $(elem4).addClass('fadeInUp');
             $(elem4).addClass('animated');
         }
 
-        if ( cscr > elem5.offset().top+(margen+1300) ) {
+        if ( elem5.offset().top+margen < 0) {
             setTimeout(function () {
                 $(elem5).css('visibility','visible');
                 $(elem5).addClass('fadeInUp');
                 $(elem5).addClass('animated');
-            },1000);
+            },200);
 
             setTimeout(function () {
                 $(elem6).css('visibility','visible');
                 $(elem6).addClass('fadeInUp');
                 $(elem6).addClass('animated');
-            },1400);
+            },400);
 
             setTimeout(function () {
                 $(elem7).css('visibility','visible');
                 $(elem7).addClass('fadeInUp');
                 $(elem7).addClass('animated');
-            },1600);
+            },600);
 
             setTimeout(function () {
                 $(elem8).css('visibility','visible');
                 $(elem8).addClass('fadeInUp');
                 $(elem8).addClass('animated');
-            },1800);
+            },800);
         }
 
-        if ( cscr > elem9.offset().top+(margen+2500) ) {
-            setTimeout(function () {
+        if ( elem9.offset().top+margen < 0) {
                 $(elem9).css('visibility','visible');
                 $(elem9).addClass('fadeInUp');
                 $(elem9).addClass('animated');
-            },1400);
         }
 
-        if ( cscr > elem10.offset().top+(margen+2500) ) {
-            setTimeout(function () {
+        if ( elem10.offset().top+margen < 0 ) {
                 $(elem10).css('visibility','visible');
                 $(elem10).addClass('fadeInUp');
                 $(elem10).addClass('animated');
-            },1400);
         }
 
-        if ( cscr > elem11.offset().top+(margen+2500) ) {
-            setTimeout(function () {
+        if ( elem11.offset().top+margen < 0 ) {
                 $(elem11).css('visibility','visible');
                 $(elem11).addClass('fadeInUp');
                 $(elem11).addClass('animated');
-            },1400);
         }
 
-        if ( cscr > elem12.offset().top+(margen+2500) ) {
-            setTimeout(function () {
+        if ( (elem12.offset().top+margen) < 0 ) {
                 $(elem12).css('visibility','visible');
                 $(elem12).addClass('fadeInUp');
                 $(elem12).addClass('animated');
-            },1400);
         }
     });
 </script>
