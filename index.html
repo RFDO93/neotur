@@ -35,9 +35,9 @@
 <body>
 
 <div class="seccion sec-uno color-gradient" id="sec-uno">
-    <video  class="videoBackgroundPhone" loop autoplay muted>
+    <!--<video  class="videoBackgroundPhone" loop autoplay muted>
         <source src="image/FinalRender.mp4" type='video/mp4' />
-    </video>
+    </video>-->
     <div class="videoBackground" id="videoBackground"></div>
     <div class="menu">
         <img src="image/Seccion1/Logo.png" class="logo" alt="">
@@ -686,10 +686,12 @@
         loop: true
     };
 
-    let player = new Vimeo.Player('videoBackground',options);
-    player.on('play', function () {
-        console.log('Play')
-    });
+    setTimeout(function () {
+        let player = new Vimeo.Player('videoBackground',options);
+        player.on('play', function () {
+            console.log('Play')
+        });
+    },600);
 
     var x = window.matchMedia("(max-width: 800px)");
 
