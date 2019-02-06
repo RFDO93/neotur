@@ -520,6 +520,7 @@ a,p {
     position: relative;
     top: -23vh;
     right: 0;
+    visibility: hidden;
 }
 
 .sec-cuatro > .contenido > .body-sectres-img > .imagen {
@@ -630,6 +631,7 @@ a,p {
     width: 50%;
     position: absolute;
     top: -16rem;
+    visibility: hidden;
 }
 
 .sec-cinco > .contenido > .body-sectres-img > .imagen {
@@ -752,6 +754,7 @@ a,p {
     right: 6rem;
     top: -10vh;
     position: absolute;
+    visibility: hidden;
 }
 
 .sec-seis > .contenido > .sec-imagen > .imagen-dos {
@@ -760,6 +763,7 @@ a,p {
     right: -2%;
     top: 16.9vh;
     height: 48vh;
+    visibility: hidden;
 }
 
 .sec-seis > .contenido > .sec-imagen > .imagen-tres {
@@ -768,6 +772,7 @@ a,p {
     right: 62%;
     top: -18vh;
     height: 38vh;
+    visibility: hidden;
 }
 
 .sec-seis > .contenido > .sec-imagen > .imagen-cuatro {
@@ -776,6 +781,7 @@ a,p {
     right: 10%;
     top: -23vh;
     height: 24vh;
+    visibility: hidden;
 }
 
 .sec-seis > .contenido {
@@ -869,6 +875,7 @@ a,p {
     flex-direction: column;
     color: #ffffff;
     margin-left: 5%;
+    visibility: hidden;
 }
 
 .sec-siete > .contenido > .titulo > p {
@@ -1064,6 +1071,7 @@ a,p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    visibility: hidden;
 }
 
 .sec-ocho > .titulo > p {
@@ -1795,6 +1803,7 @@ footer {
 
     .sec-ocho > .img-dos{
         top: 16vh;
+        visibility: hidden;
     }
 
     .sec-ocho > button{

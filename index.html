@@ -707,6 +707,14 @@
         let elem2 = $(".sec-tres > .contenido > .body-sectres-img");
         let elem3 = $(".sec-cuatro > .contenido > .body-sectres-img");
         let elem4 = $(".sec-cinco > .contenido > .body-sectres-img");
+        let elem5 = $(".sec-seis > .contenido > .sec-imagen > .imagen-uno");
+        let elem6 = $(".sec-seis > .contenido > .sec-imagen > .imagen-tres");
+        let elem7 = $(".sec-seis > .contenido > .sec-imagen > .imagen-dos");
+        let elem8 = $(".sec-seis > .contenido > .sec-imagen > .imagen-cuatro");
+        let elem9 = $(".sec-siete > .contenido > .titulo");
+        let elem10 =  $(".sec-ocho > .titulo");
+        let elem11 =  $(".sec-ocho > .img-dos");
+        let elem12 =  $(".sec-nueve > .sec > .imagen-uno");
         let margen = -600;
 
 
@@ -716,25 +724,82 @@
             $(".opciones-top").addClass('fadeInUp');
             $(".opciones-top").addClass('animated');
         }
-        if ( cscr > elem2.offset().top+margen+500 ) {
+
+        if ( cscr > elem2.offset().top+(margen+1400) ) {
             $(elem2).css('visibility','visible');
             $(elem2).addClass('fadeInUp');
             $(elem2).addClass('animated');
         }
 
-        if ( cscr > elem3.offset().top+margen+400 ) {
+        if ( cscr > elem3.offset().top+(margen+1600) ) {
             $(elem3).css('visibility','visible');
             $(elem3).addClass('fadeInUp');
             $(elem3).addClass('animated');
         }
 
-        if ( cscr > elem4.offset().top+margen+400 ) {
+        if ( cscr > elem4.offset().top+(margen+2000) ) {
             $(elem4).css('visibility','visible');
             $(elem4).addClass('fadeInUp');
             $(elem4).addClass('animated');
         }
 
+        if ( cscr > elem5.offset().top+(margen+1300) ) {
+            setTimeout(function () {
+                $(elem5).css('visibility','visible');
+                $(elem5).addClass('fadeInUp');
+                $(elem5).addClass('animated');
+            },1000);
 
+            setTimeout(function () {
+                $(elem6).css('visibility','visible');
+                $(elem6).addClass('fadeInUp');
+                $(elem6).addClass('animated');
+            },1400);
+
+            setTimeout(function () {
+                $(elem7).css('visibility','visible');
+                $(elem7).addClass('fadeInUp');
+                $(elem7).addClass('animated');
+            },1600);
+
+            setTimeout(function () {
+                $(elem8).css('visibility','visible');
+                $(elem8).addClass('fadeInUp');
+                $(elem8).addClass('animated');
+            },1800);
+        }
+
+        if ( cscr > elem9.offset().top+(margen+2500) ) {
+            setTimeout(function () {
+                $(elem9).css('visibility','visible');
+                $(elem9).addClass('fadeInUp');
+                $(elem9).addClass('animated');
+            },1400);
+        }
+
+        if ( cscr > elem10.offset().top+(margen+2500) ) {
+            setTimeout(function () {
+                $(elem10).css('visibility','visible');
+                $(elem10).addClass('fadeInUp');
+                $(elem10).addClass('animated');
+            },1400);
+        }
+
+        if ( cscr > elem11.offset().top+(margen+2500) ) {
+            setTimeout(function () {
+                $(elem11).css('visibility','visible');
+                $(elem11).addClass('fadeInUp');
+                $(elem11).addClass('animated');
+            },1400);
+        }
+
+        if ( cscr > elem12.offset().top+(margen+2500) ) {
+            setTimeout(function () {
+                $(elem12).css('visibility','visible');
+                $(elem12).addClass('fadeInUp');
+                $(elem12).addClass('animated');
+            },1400);
+        }
     });
 </script>
 <script>
